@@ -5,10 +5,10 @@
     position: absolute;
 }
 
-#menu > img {
+#menu > a > img {
     width: 180px;
     height: auto;
-    left: 70%;
+    left: 71%;
     position: relative;
     transform: translateX(-50%);
     scale: 5;
