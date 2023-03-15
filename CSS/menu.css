@@ -8,8 +8,9 @@
 #menui > a > img {
     width: 180px;
     height: auto;
-    left: 71%;
-    position: relative;
+    display: block;
+    margin-left: 71%;
+    margin-right: 71%;
     transform: translateX(-50%);
     scale: 5;
     transition: 0.5s;
