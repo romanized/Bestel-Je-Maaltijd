@@ -1,3 +1,5 @@
+@import url('https://fonts.cdnfonts.com/css/imagination-station');
+
 *{
     margin: 0;
     padding: 0;
@@ -7,18 +9,29 @@
 .banner{
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(../Media/banner-shabushabu.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.55   ),rgba(0,0,0,0.55)),url(../Media/banner-shabushabu.jpg);
     background-size: cover;
     background-position: center;
 }
 
-.navbar{
+div.navbar{
     width: 85%;
     margin: auto;
     padding: 35px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    top: 0;
+    transition: 0.9s;
+}
+
+.change{
+    /* background-color: rgba(249, 249, 249, 0.609); */
+    height: 3%;
+    transition: 0.9s;
+    width: 200%;
+    scale: 0.9;
+    position: sticky;
 }
 
 .logo{
@@ -49,7 +62,7 @@
     content: '';
     height: 3px;
     width: 0;
-    background: #009688;
+    background: #56bd02;
     position: absolute;
     left: 0;
     bottom: 0;
@@ -63,12 +76,12 @@
 .navbar img{
     width: 180px;
     height: auto;
-    scale: 1;
+    scale: 1.2;
     transition: 0.5s;
 }
 
 .navbar img:hover{
-    scale: 1.3;
+    scale: 1.5;
 }
 
 .content{
@@ -84,7 +97,9 @@
 .content h1{
     font-size: 70px;
     margin-top: 80px;
-    font-family: 'Zeyada', cursive;
+    font-family: 'Imagination Station', sans-serif;
+    color: rgb(53,230,26);
+    color: linear-gradient(90deg, rgba(53,230,26,1) 0%, rgba(136,116,18,1) 50%, rgba(64,42,8,1) 100%);
 }
 
 .content p{
@@ -92,6 +107,8 @@
     font-weight: 100;
     line-height: 25px;
     font-size: 17px;
+    color: #fff;
+    font-weight: bold;
 }
 
 button{
@@ -109,6 +126,27 @@ button{
     overflow: hidden;
     scale: 1;
     transition: 0.7s;
+}
+
+.fa-instagram {
+    color: white;
+    scale: 1.8;
+    padding-bottom: 5px;
+    transition: 0.5;
+  }
+
+.fa-facebook {
+    color: white;
+    margin-right: 30px;
+    margin-left: 5px;
+    scale: 1.8;
+    padding-bottom: 2px;
+    transition: 0.5s;
+  }
+
+.fa:hover {
+    opacity: 0.7;
+    scale: 2;
 }
 
 span{
@@ -135,6 +173,16 @@ button:hover{
 .column{
     flex: 50%;
     padding: 10px;
+}
+
+.column h1 {
+    font-family: 'Imagination Station', sans-serif;                          
+}
+
+.column h3 {
+    font-family: Open Sans;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
 }
 
 .row{
