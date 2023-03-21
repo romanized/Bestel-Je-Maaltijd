@@ -1,9 +1,13 @@
 @import url('https://fonts.cdnfonts.com/css/imagination-station');
+html {
+    scroll-behavior: smooth;
+  }
 
 *{
     margin: 0;
     padding: 0;
     font-family: 'Lato', sans-serif;
+    box-sizing: border-box;
 }
 
 .banner{
@@ -52,6 +56,11 @@ div.navbar{
     scale: 1.3;
 }
 
+button a{
+    text-decoration: none;
+    color: white;
+}
+
 .navbar ul li a{
     text-decoration: none;
     color: #fff;
@@ -98,8 +107,8 @@ div.navbar{
     font-size: 70px;
     margin-top: 80px;
     font-family: 'Imagination Station', sans-serif;
-    color: rgb(53,230,26);
-    color: linear-gradient(90deg, rgba(53,230,26,1) 0%, rgba(136,116,18,1) 50%, rgba(64,42,8,1) 100%);
+    color: rgb(252,240,103);
+    color: linear-gradient(90deg, rgba(252,240,103,1) 33%, rgba(179,135,40,1) 47%); 
 }
 
 .content p{
@@ -158,7 +167,7 @@ span{
     left: 0;
     bottom: 0;
     z-index: -1;
-    transition: 0.5s;
+    transition: 0.6s;
 }
 
 button:hover span{
@@ -167,24 +176,253 @@ button:hover span{
 
 button:hover{
     border: none;
-    scale: 1.2;
+    scale: 1.13;
 }
 
-.column{
+.column1{
     flex: 50%;
     padding: 10px;
 }
 
-.column h1 {
-    font-family: 'Imagination Station', sans-serif;                          
+.column1 h1 {
+    color: #b70e0e;
+    font-family: 'Imagination Station', sans-serif;
+    font-size: 58px;                          
 }
 
-.column h3 {
+.column1 h3 {
     font-family: Open Sans;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
+    font-size: 14.7px;
+    padding-bottom: 18px;
+    color:#333333;
 }
 
-.row{
-    display: flex;
+hr{
+    margin-top: 100px;
+    overflow: visible;
+    padding: 0;
+    border: none;
+    border-top: medium double #333;
+    color: #333;
+    text-align: center;
 }
+
+hr:after {
+    content: "\1F363";
+    display: inline-block;
+    position: relative;
+    top: -0.7em;
+    font-size: 1.5em;
+    padding: 0 0.25em;
+    background: white;
+}
+.column1 h2{
+    font-family: Open Sans;
+    text-transform: uppercase;
+    font-size: 17px;
+    letter-spacing: 3px;
+}
+
+.column1 p{
+    color:#333333;
+    font-size: 17.6px;
+    letter-spacing: 1px;
+    padding-top: 15px;
+}
+
+#p-column{
+    line-height: 30px;
+}
+
+#colum1-ves p{
+    padding-top: 9px;
+    font-size: 17px;
+    color: #f71713;
+    scale: 1.0;
+    transition: 0.3s;
+}
+
+#colum1-ves p:hover{
+    cursor: pointer;
+    color: rgb(34, 5, 5);
+    scale: 1.01;
+}
+
+.row:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column1{
+    float: left;
+    width: 50%;
+    padding: 10px;
+}
+
+.column1 button{
+    color: white;
+    background: linear-gradient(125deg,#e71712,#b70e0e);
+    scale: 1.0;
+    transition: 0.5s;
+    border: none;
+    border-radius: 4px;
+    margin-top: 50px;
+}
+.column1 button:hover{
+    scale: 1.1;
+}
+
+.column1 span{
+    background: linear-gradient(125deg,#d81f1c,#a50c0c);
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.8s;
+}
+
+.column1 button:hover span{
+    width: 100%;
+}
+
+.section2{
+    margin-top: 75px;
+}
+
+.row {
+    margin-left: 150px;
+}
+
+.box-img h2{
+    font-family: 'Imagination Station', sans-serif;
+}
+
+.section3{
+    margin-top: 110px;
+}
+
+.heading{
+    text-align: center;
+}
+
+.heading h2{
+    color: #b70e0e;
+    font-family: 'Imagination Station', sans-serif;
+    font-size: 58px;    
+}
+
+.box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+    grid-gap: 1.5rem;
+    align-items: center;
+}
+
+.box-img{
+    position: relative;
+    margin-top: 4rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background: rgb(119,153,54);
+    background: linear-gradient(90deg, rgba(119,153,54,1) 0%, rgba(146,173,94,1) 20%, rgba(168,189,126,1) 40%, rgba(185,202,152,1) 60%, rgba(199,213,173,1) 80%, rgba(210,221,189,1) 100%);  */
+    background: #e7cb9a;
+    color: white;
+    padding: 20px;
+    border-radius: 0.5rem;
+    scale: 0.98;
+    transition: 0.4s;
+}
+
+.box-img img{
+    border-radius: 7px;
+}
+
+.box-img:hover{
+    scale: 1.03;
+    cursor: pointer;
+    color: #b70e0e;
+    background: #e5b380;
+    transition: 0.5s;
+}
+
+.box-img h2{
+    font-size: 46px;
+}
+
+.box-img h3{
+    align-content: left;
+    padding-bottom: 20px;
+    color:#fff;
+    transition: 0.5s;
+}
+
+.box-img h3:hover{
+    color:#333333;
+}
+
+footer{
+    color: #777777 !important;
+    background-color: rgba(134, 110, 110, 0.18);
+    height: 230px;
+    align-items: center;
+    text-align: center;
+    font-size: 15.6px;
+    margin-top: 50px;
+}
+
+footer .fa-instagram {
+    color: rgb(124, 122, 122);
+    scale: 3.1;
+    padding-bottom: 5px;
+    transition: 0.7;
+    margin-top: 60px;
+    cursor: pointer;
+    margin-bottom: 30px;
+  }
+  
+footer .fa-facebook {
+        color: rgb(124, 122, 122);
+        scale: 2.7;
+        transition: 0.7;
+        margin-right: 60px;
+        cursor: pointer;
+}
+
+footer .fa-facebook:hover{
+    scale: 2.7;
+    color: #a50c0c;
+}
+
+footer .fa-instagram:hover{
+    scale: 3.1;
+    color: #a50c0c;
+}
+
+footer p{
+    padding-bottom: 10px;
+}
+
+footer a{
+    transition: 0.3s;
+    scale: 1;
+    text-decoration: none;
+    color: rgb(124, 122, 122);
+}
+
+footer a:hover{
+    color: #d81f1c;
+    scale: 1.1;
+    text-decoration: none;
+}
+
+
+

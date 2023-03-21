@@ -4,26 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Sushi restaurant SHABUSHABU</title>
     <link rel="stylesheet" href="../CSS/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
     <link rel="icon" href="https://shabushabu.nl/wp-content/uploads/2019/07/favicon.png" sizes="32x32">
     <link rel="icon" href="https://shabushabu.nl/wp-content/uploads/2019/07/favicon.png" sizes="192x192">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap" rel="stylesheet"> 
 </head>
 <body>
+    <section class="section1" id="section1">
     <div class="banner">
         <div class="navbar">
             <img src="../Media/NewLogo.PNG" alt="logo" class="logo">
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="#">Bestellen</a></li>
-                <li><a href="#">Menu</a></li>
-                <li><a href="#">Informatie</a></li>
-                <a href="#" class="fa fa-facebook"></a>
-                <a href="#" class="fa fa-instagram"></a>
+                <li><a href="./bestel.html">Bestellen</a></li>
+                <li><a href="./menu.html">Menu</a></li>
+                <li><a href="./info.html">Informatie</a></li>
+                <a href="https://www.facebook.com/shabushabu.nl" class="fa fa-facebook" target="_blank"></a>
+                <a href="https://www.instagram.com/restaurant_shabushabu/" class="fa fa-instagram" target="_blank"></a>
             </ul>
         </div>
 
@@ -37,33 +40,89 @@
                 Schuif dus heerlijk aan in één van onze sushi 
                 restaurants in de buurt of bestel uw sushi eenvoudig online.
             </p>
-            
             <div>
-                <button type="button"><span></span>BESTEL ONLINE</button>
-                <button type="button"><span></span>MENUKAART</button>
+                <button type="button"><a href="#scrolling1"><span></span>Restaurants</a></button>
+                <button type="button"><a href="#scrolling2"><span></span>Diverse mogelijkheden</a></button>
+            </div>
+        </div>
+    </div>
+    <scrolling id="scrolling1">
+    </section>
+
+    <section class="section2" id="section2">
+    <div class="row" id="row">
+        <div class="column1" id="column1-left">
+            <h3>Restaurants</h3>
+            <h1>Vind een sushi restaurant in <br>de buurt</h1>
+            <p id="p-column">Op zoek naar het beste sushi restaurant bij u
+                in de buurt? Bij SHABU SHABU bent u<br> aan het juiste adres.
+                Wij hebben namelijk vestigingen door heel Nederland. 
+                Daardoor is<br> heerlijke sushi altijd binnen handbereik. 
+                Of u nu uit eten gaat of sushi thuis komt afhalen.<br> 
+                Bekijk de SHABU SHABU vestiging bij u in de buurt voor de mogelijkheden. 
+                 Benieuwd naar <br>onze gerechten? Bekijk hier onder onze <m style="color: rgb(243, 49, 49);">menukaart</m>.
+            </p>
+            <button type="button"><span></span>Menukaart</button>
+        </div>
+        <div class="column1" id="colum1-ves">
+            <h2>Alle vestigingen</h2>
+            <p style="padding-top: 17px;">Alphen Aan Den Rijn</p>
+            <p>Amersfoort</p>
+            <p>Apeldoorn</p>
+            <p>Den Haag</p>
+            <p>Dinxperlo</p>
+            <p>Ede</p>
+            <p>Leiden</p>
+            <p>Rotterdam</p>
+            <p>Rotterdam Alexandrium</p>
+            <p>Rotterdam Zuid</p>
+            <p>Zoetermeer</p>
+        </div>
+    </div>
+    </section>
+
+    <hr id="scrolling2">
+
+    <section class="section3" id="section3">
+        <div class="heading">
+            <h2>Alle mogelijkheden bij Shabu Shabu</h2>
+        </div>
+
+        <div class="box-container">
+        <div class="box" style="margin-left: 20px;">
+            <div class="box-img">
+                <h2>All you can eat</h2>
+                <h3>Lees meer</h3>
+                <img src="../Media/section3-1.jpg" alt="1" width="430px">
             </div>
         </div>
 
-    </div>
+        <div class="box">
+            <div class="box-img">
+                <h2>Japans restaurant</h2>
+                <h3>Lees meer</h3>
+                <img src="../Media/section3-2.jpg" alt="2" width="430px">
+            </div>
+        </div>
 
-    <div class="row">
-        <div class="column">
-            <h3>Restaurants</h3>
-            <h1>Vind een sushi restaurant in de buurt</h1>
-            <p>Op zoek naar het beste sushi restaurant bij u
-                in de buurt? Bij SHABU SHABU bent u aan het juiste adres.
-                Wij hebben namelijk vestigingen door heel Nederland. 
-                Daardoor is heerlijke sushi altijd binnen handbereik. 
-                Of u nu uit eten gaat of sushi thuis komt afhalen. 
-                Bekijk de SHABU SHABU vestiging bij u in de buurt voor de mogelijkheden. 
-                 Benieuwd naar onze gerechten? Bekijk hier onze menukaart.</p>
-        </div>
-        <div class="column">
-            <h2>Column1</h2>
-            <p>testong</p>
+        <div class="box">
+            <div class="box-img" style="margin-right: 20px;">
+                <h2>Sushi en Grill</h2>
+                <h3>Lees meer</h3>
+                <img src="../Media/section3-3.jpg" alt="3" width="430px">
+            </div>
         </div>
     </div>
-    
+    </section>
+
+<hr>
+
+    <footer>
+        <a href="https://www.facebook.com/shabushabu.nl" class="fa fa-facebook" target="_blank"></a>
+        <a href="https://www.instagram.com/restaurant_shabushabu/" class="fa fa-instagram" target="_blank"></a>
+        <p><a href="./index.html">Home</a> - <a href="./bestel.html">Bestellen</a>  - <a href="./menu.html">Menu</a> - <a href="./info.html">Informatie</a></p>
+        <p>&#169; 2023 Shabu Shabu. <a href="https://www.glr.nl/" target="_blank">GLR</a> - <a href="https://www.glr.nl/opleidingen/software-developer" target="_blank">Software Developer</a> - <a href="https://www.glr.nl/contact" target="_blank">Contact</a></p>
+    </footer>
     
     <script src="../JAVASCRIPT/script.js"></script>
 </body>
