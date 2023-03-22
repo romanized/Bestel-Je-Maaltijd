@@ -23,9 +23,11 @@ body {
   background-color: transparent;
   border: none;
   color: gray;
-  font-size: 20px;
+  font-size: 30px;
   cursor: pointer;
-  margin-right: 20px;
+  width: 35px;
+  height: 65px;
+  margin-left: 25px;
 }
 
 .container {
@@ -55,12 +57,13 @@ h1 {
   margin-bottom: 10px;
   background: #ffffff;
   color: black;
-  border-radius: 5px;
+  border-radius: 10px;
+  font-size: 20px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 350px;
+  height: 360px;
 }
 .dish img {
   max-width: 100%;
@@ -102,7 +105,7 @@ button {
   padding: 20px;
   transition: all 0.3s;
   z-index: 1000;
-  color: gray;
+  color: rgb(0, 0, 0);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -116,19 +119,23 @@ button {
 
 .close-cart {
   position: absolute;
-  top: 10px;
+  top: -30px;
   right: 10px;
   background-color: transparent;
   border: none;
-  font-size: 20px;
+  font-size: 35px;
   cursor: pointer;
+  width: 37px;
+  height: 62px;
+  transition: 0.3s;
 }
+
 #cart-items {
   text-align: left;
   margin: 10px 0;
-  background-color: #f5f5f5;
+  background-color: #e7cb9a;
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 15px;
 }
 
 .footer1{
@@ -142,6 +149,7 @@ button {
 .button1 {
   color: #f44336;
   padding-bottom: 35px;
+  margin-left: 18px;
 }
 
 .button1:hover {
@@ -150,4 +158,131 @@ button {
 
 .button2{
   color: #f44336;
+  border: solid 2px #f44336;
+}
+
+.button2:hover {
+  color: #000000;
+  border: solid 2px black;
+}
+
+.container h1{
+  color: rgb(252,240,103);
+  color: linear-gradient(90deg, rgba(252,240,103,1) 33%, rgba(179,135,40,1) 47%); 
+  font-size: 50px;
+}
+
+.orderButton {
+  color: red;
+  border: solid 2px red;
+  font-weight: bold;
+  font-family: 'Imagination Station', sans-serif;
+  padding-top: 20px;
+  transition: 0.5s;
+  margin-left: 22px;
+}
+
+.orderButton:hover {
+  color: black;
+  border: solid 2px black;
+}
+
+.winkelmandje {
+  font-family: 'Imagination Station', sans-serif;
+  align-items: center;
+  text-align: center;
+  font-size: 40px;
+  padding-top: 25px;
+  color: #b70e0e;
+}
+
+.group        { 
+  position:relative; 
+  margin-bottom:45px; 
+}
+input         {
+  font-size:18px;
+  padding:10px 10px 10px 5px;
+  display:block;
+  width:300px;
+  border:none;
+  border-bottom:1px solid #757575;
+}
+input:focus     { outline:none; }
+
+label          {
+  color: #b70e0e;
+  font-size:18px;
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+  left:5px;
+  top:10px;
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+
+input:focus ~ label, input:valid ~ label    {
+  top:-20px;
+  font-size:14px;
+  color:#000000;
+}
+
+.bar  { position:relative; display:block; width:300px; }
+.bar:before, .bar:after   {
+  content:'';
+  height:2px; 
+  width:0;
+  bottom:1px; 
+  position:absolute;
+  color: #b70e0e;
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+.bar:before {
+  left:50%;
+}
+.bar:after {
+  right:50%; 
+}
+
+/* active state */
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+  width:50%;
+}
+
+.highlight {
+  position:absolute;
+  height:60%; 
+  width:100px; 
+  top:25%; 
+  left:0;
+  pointer-events:none;
+  opacity:0.5;
+}
+
+/* active state */
+input:focus ~ .highlight {
+  -webkit-animation:inputHighlighter 0.3s ease;
+  -moz-animation:inputHighlighter 0.3s ease;
+  animation:inputHighlighter 0.3s ease;
+}
+
+@-webkit-keyframes inputHighlighter {
+  from { background:#5264AE; }
+  to  { width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+  from { background:#5264AE; }
+  to  { width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+  from { background:#5264AE; }
+  to  { width:0; background:transparent; }
+}
+
+.group {
+  margin-top: 12px;
 }

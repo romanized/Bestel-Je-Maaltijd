@@ -24,20 +24,20 @@ function updateCartDisplay() {
   cartItems.innerHTML = "";
 
   if (cart.size === 0) {
-    cartItems.innerHTML = "Your cart is empty.";
+    cartItems.innerHTML = "Uw winkelwagentje is leeg.";
   } else {
     let total = 0;
     for (const [id, item] of cart.entries()) {
       const listItem = document.createElement("div");
       const itemInfo = document.createElement("p");
-      itemInfo.textContent = `${item.name} x ${item.count} ($${(
+      itemInfo.textContent = `${item.name} x ${item.count} (€${(
         item.price * item.count
       ).toFixed(2)})`;
       listItem.appendChild(itemInfo);
 
       const removeButton = document.createElement("button");
       removeButton.classList.add ("button2");
-      removeButton.textContent = "Remove";
+      removeButton.textContent = "Verwijder";
       removeButton.onclick = () => removeFromCart(id);
       listItem.appendChild(removeButton);
 
@@ -46,7 +46,7 @@ function updateCartDisplay() {
     }
     const totalElement = document.createElement("p");
     totalElement.style.fontWeight = "bold";
-    totalElement.textContent = `Total: $${total.toFixed(2)}`;
+    totalElement.textContent = `Totaal: €${total.toFixed(2)}`;
     cartItems.appendChild(totalElement);
   }
 }
@@ -65,7 +65,7 @@ function placeOrder() {
       })\n`;
       total += item.price * item.count;
     }
-    orderDetails += `Total: €${total}\n`;
+    orderDetails += `Totaal: €${total}\n`;
     orderDetails += "Bestelling geplaatst, u ontvangt een bevestigingsmail.";
     alert(orderDetails);
     cart.clear();
@@ -94,11 +94,11 @@ function createDishElements() {
 
     const dishPrice = document.createElement("p");
     dishPrice.classList.add("price");
-    dishPrice.textContent = "€" + dish.price;
+    dishPrice.textContent = "€" + dish.price + "0";
 
     const addToCartButton = document.createElement("button");
     addToCartButton.classList.add ("button1");
-    addToCartButton.textContent = "Add to Cart";
+    addToCartButton.textContent = "Bestel";
     addToCartButton.onclick = () => addToCart(dish.id);
 
     dishElement.appendChild(dishImage);

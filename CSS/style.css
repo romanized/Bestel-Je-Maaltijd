@@ -115,7 +115,7 @@ button a{
     margin: 20px auto;
     font-weight: 100;
     line-height: 25px;
-    font-size: 17px;
+    font-size: 18px;
     color: #fff;
     font-weight: bold;
 }
@@ -134,7 +134,7 @@ button{
     position: relative;
     overflow: hidden;
     scale: 1;
-    transition: 0.7s;
+    transition: 0.8s;
 }
 
 .fa-instagram {
@@ -304,7 +304,7 @@ hr:after {
 }
 
 .section3{
-    margin-top: 110px;
+    margin-top: 85px;
 }
 
 .heading{
@@ -424,5 +424,70 @@ footer a:hover{
     text-decoration: none;
 }
 
+.section4 {
+    max-width: 1200px;
+    max-height: 900px;
+    position: relative;
+    margin: auto;
+    margin-top: 60px;
 
+}
 
+.mySlides {
+    display: none;
+    max-width: 1200px;
+    max-height: 900px;
+  }
+
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  .prev:hover, .next:hover {
+    background-color: rgba(255, 0, 0, 0.8);
+  }
+
+  .text {
+    font-family: 'Imagination Station', sans-serif;
+    color: rgb(0, 255, 170);
+    font-size: 45px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 18px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }

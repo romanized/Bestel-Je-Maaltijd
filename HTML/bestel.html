@@ -3,15 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Online Bestellen</title>
+    <title>Online Bestellen Shabu Shabu</title>
     <link rel="stylesheet" href="../CSS/bestel.css">
     <link rel="stylesheet" href="../CSS/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="https://shabushabu.nl/wp-content/uploads/2019/07/favicon.png" sizes="32x32">
+    <link rel="icon" href="https://shabushabu.nl/wp-content/uploads/2019/07/favicon.png" sizes="192x192">
   </head>
   <body>
     <div class="banner">
     <div class="navbar">
-      <img src="../Media/NewLogo.PNG" alt="logo" class="logo">
+      <a href="./index.html"><img src="../Media/NewLogo.PNG" alt="logo" class="logo"></a>
       <ul>
           <li><a href="./index.html">Home</a></li>
           <li><a href="#">Bestellen</a></li>
@@ -28,17 +30,25 @@
         </div>
     </div>
     <div id="cart">
-        <button style="color: black;" class="close-cart" onclick="toggleCart()">x</button>
-        <h2>Winkelmandje</h2>
-        <label for="name">Naam:</label>
-        <input type="text" id="name" placeholder="Voer uw naam in" required>
+        <button style="color: black;" class="close-cart" onclick="toggleCart()">&#10006;</button>
+        <h2 class="winkelmandje">Winkelwagen</h2>
+        <div class="group">      
+          <input type="text" required>
+          <span class="highlight"></span>
+          <span class="bar"></span>
+          <label>Uw naam</label>
+        </div>
         <br>
-        <label for="address">Adres:</label>
-        <input type="text" id="address" placeholder="Voer uw adres in" required>
+        <div class="group">      
+          <input type="text" required>
+          <span class="highlight"></span>
+          <span class="bar"></span>
+          <label>Uw adres</label>
+        </div>
         <br>
 
         <div id="cart-items"></div>
-        <button onclick="placeOrder()">Order</button>
+        <button class="orderButton" onclick="placeOrder()">Order</button>
         <div id="order-message" style="display: none;"></div>
     </div>
   </div>
