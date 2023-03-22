@@ -1,10 +1,10 @@
 const dishesData = [
-  { id: 1, name: "Sushi Roll", price: 9.99, img: "sushi-roll.jpg" },
-  { id: 2, name: "Sashimi Platter", price: 12.99, img: "sashimi-platter.jpg" },
-  { id: 3, name: "Salmon Nigiri", price: 5.99, img: "salmon-nigiri.jpg" },
-  { id: 4, name: "Spicy Tuna Roll", price: 10.99, img: "spicy-tuna-roll.jpg" },
-  { id: 5, name: "Rainbow Roll", price: 11.99, img: "rainbow-roll.jpg" },
-  { id: 6, name: "California Roll", price: 7.99, img: "california-roll.jpg" },
+  { id: 1, name: "Zalm Nigiri 2x", price: 3.90, img: "/Media/zalmnigiri.jpg" },
+  { id: 2, name: "Tonijn Maki 6x", price: 4.70, img: "/Media/tonijnmaki.jpg" },
+  { id: 3, name: "California Zalm 3x", price: 5.20, img: "/Media/Californiazalm.jpg" },
+  { id: 4, name: "Surimi Temaki 2x", price: 4.50, img: "/Media/Surimitemaki.jpg" },
+  { id: 5, name: "Gunak Zeewier 3x", price: 3.70, img: "/Media/gunakzeewier.jpg" },
+  { id: 6, name: "Nigiri Omlet 2x", price: 4.70, img: "/Media/nigiriomlet.jpg" },
 ];
 
 const cart = new Map();
@@ -36,6 +36,7 @@ function updateCartDisplay() {
       listItem.appendChild(itemInfo);
 
       const removeButton = document.createElement("button");
+      removeButton.classList.add ("button2");
       removeButton.textContent = "Remove";
       removeButton.onclick = () => removeFromCart(id);
       listItem.appendChild(removeButton);
@@ -53,19 +54,19 @@ function updateCartDisplay() {
 function placeOrder() {
   if (cart.size === 0) {
     alert(
-      "Your cart is empty. Please add items to your cart before placing an order."
+      "Uw winkelwagen is nog leeg. \nVoeg producten toe om door te gaan."
     );
   } else {
-    let orderDetails = "You ordered:\n";
+    let orderDetails = "Uw bestelling:\n";
     let total = 0;
     for (const [id, item] of cart.entries()) {
-      orderDetails += `${item.name} x ${item.count} ($${
+      orderDetails += `${item.name} x ${item.count} (€${
         item.price * item.count
       })\n`;
       total += item.price * item.count;
     }
-    orderDetails += `Total: $${total}\n`;
-    orderDetails += "Your order has been placed.";
+    orderDetails += `Total: €${total}\n`;
+    orderDetails += "Bestelling geplaatst, u ontvangt een bevestigingsmail.";
     alert(orderDetails);
     cart.clear();
     updateCartDisplay();
@@ -93,9 +94,10 @@ function createDishElements() {
 
     const dishPrice = document.createElement("p");
     dishPrice.classList.add("price");
-    dishPrice.textContent = "$" + dish.price;
+    dishPrice.textContent = "€" + dish.price;
 
     const addToCartButton = document.createElement("button");
+    addToCartButton.classList.add ("button1");
     addToCartButton.textContent = "Add to Cart";
     addToCartButton.onclick = () => addToCart(dish.id);
 

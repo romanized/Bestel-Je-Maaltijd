@@ -5,23 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Online Bestellen</title>
     <link rel="stylesheet" href="../CSS/bestel.css">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
-    <div class="header">
-        <button class="cart-toggle" onclick="toggleCart()">🛒</button>
-    </div>
+    <div class="banner">
+    <div class="navbar">
+      <img src="../Media/NewLogo.PNG" alt="logo" class="logo">
+      <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="#">Bestellen</a></li>
+          <li><a href="./menu.html">Menu</a></li>
+          <li><a href="./info.html">Informatie</a></li>
+          <a href="https://www.facebook.com/shabushabu.nl" class="fa fa-facebook" target="_blank"></a>
+          <a href="https://www.instagram.com/restaurant_shabushabu/" class="fa fa-instagram" target="_blank"></a>
+          <button class="cart-toggle" onclick="toggleCart()">🛒</button>
+        </ul>
+  </div>
     <div class="container">
-        <h1>Food Ordering System</h1>
+        <h1>Bestel Hier Uw Eten</h1>
         <div class="dishes">
         </div>
     </div>
     <div id="cart">
         <button style="color: black;" class="close-cart" onclick="toggleCart()">x</button>
-        <h2>Cart</h2>
+        <h2>Winkelmandje</h2>
+        <label for="name">Naam:</label>
+        <input type="text" id="name" placeholder="Voer uw naam in" required>
+        <br>
+        <label for="address">Adres:</label>
+        <input type="text" id="address" placeholder="Voer uw adres in" required>
+        <br>
+
         <div id="cart-items"></div>
         <button onclick="placeOrder()">Order</button>
         <div id="order-message" style="display: none;"></div>
     </div>
+  </div>
+  <footer class="footer1">
+    <a href="https://www.facebook.com/shabushabu.nl" class="fa fa-facebook" target="_blank"></a>
+    <a href="https://www.instagram.com/restaurant_shabushabu/" class="fa fa-instagram" target="_blank"></a>
+    <p><a href="./index.html">Home</a> - <a href="./bestel.html">Bestellen</a>  - <a href="./menu.html">Menu</a> - <a href="./info.html">Informatie</a></p>
+    <p>&#169; 2023 Shabu Shabu. <a href="https://www.glr.nl/" target="_blank">GLR</a> - <a href="https://www.glr.nl/opleidingen/software-developer" target="_blank">Software Developer</a> - <a href="https://www.glr.nl/contact" target="_blank">Contact</a></p>
+</footer>
     <script src="../JAVASCRIPT/bestel.js"></script>
 </body>
 </html>    
