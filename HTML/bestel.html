@@ -1,12 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bestellen</title>
+<lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Bestellen</title>
     <link rel="stylesheet" href="../CSS/bestel.css">
-</head>
-<body>
+  </head>
+  <body>
+    <div class="header">
+        <button class="cart-toggle" onclick="toggleCart()">🛒</button>
+    </div>
+    <div class="container">
+        <h1>Food Ordering System</h1>
+        <div class="dishes">
+        </div>
+    </div>
+    <div id="cart">
+        <button style="color: black;" class="close-cart" onclick="toggleCart()">x</button>
+        <h2>Cart</h2>
+        <div id="cart-items"></div>
+        <button onclick="placeOrder()">Order</button>
+        <div id="order-message" style="display: none;"></div>
+    </div>
+    <script src="../JAVASCRIPT/bestel.js"></script>
 </body>
-</html>
+</html>    
