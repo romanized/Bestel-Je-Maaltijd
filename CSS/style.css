@@ -464,9 +464,9 @@ footer a:hover{
   }
 
   .text {
-    font-family: 'Imagination Station', sans-serif;
+    font-family: 'Cookie';
     color: rgb(0, 255, 170);
-    font-size: 45px;
+    font-size: 65px;
     padding: 8px 12px;
     position: absolute;
     bottom: 8px;
@@ -491,3 +491,64 @@ footer a:hover{
     from {opacity: .4}
     to {opacity: 1}
   }
+
+  .popup {
+    position: fixed;
+    top: 250px;
+    right: -100%;
+    width: 300px;
+    height: 39vh;
+    border-radius: 15px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: 2.6s;
+    z-index: 1000;
+    background-color: #ff0000 !important; /* button color */
+    border-color: #8f9396 !important; /* border color */
+    color: white !important; /* font color */
+    font-size: 16px !important; /* font size */
+    align-items: center;
+    text-align: center;
+    opacity: 90%;
+}
+
+.popup.open {
+    right: 0;
+}
+
+.popup h3{
+    font-family: 'Alkatra', cursive;
+    font-size: 23px;
+}
+
+.popup p{
+    font-family: 'Hind Siliguri', sans-serif;
+    font-size: 16px;
+}
+
+.close-btn {
+    position: absolute;
+    color: rgb(255, 255, 255);
+    top: 25px;
+    left: 13px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: 0.5s;
+    scale: 1.1;
+}
+
+.close-btn:hover{
+    color: rgb(0, 0, 0);
+    scale: 1.11;
+}
+
+.popup button{
+        color: #ffffff;
+        border: solid 2px rgb(255, 255, 255);
+}
+
+.popup button:hover{
+    color: #000000;
+    border: solid 2px rgb(0, 0, 0);
+}

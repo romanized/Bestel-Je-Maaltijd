@@ -66,7 +66,7 @@ function placeOrder() {
       total += item.price * item.count;
     }
     orderDetails += `Totaal: €${total}\n`;
-    orderDetails += "Bestelling geplaatst, u ontvangt een bevestigingsmail.";
+    orderDetails += "Bestelling geplaatst, bezorging kan 20 a 40 minuten duren.";
     alert(orderDetails);
     cart.clear();
     updateCartDisplay();
