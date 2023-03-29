@@ -1,10 +1,10 @@
 const dishesData = [
-  { id: 1, name: "Zalm Nigiri 2x", price: 3.90, img: "/Media/zalmnigiri.jpg" },
-  { id: 2, name: "Tonijn Maki 6x", price: 4.70, img: "/Media/tonijnmaki.jpg" },
-  { id: 3, name: "California Zalm 3x", price: 5.20, img: "/Media/Californiazalm.jpg" },
-  { id: 4, name: "Surimi Temaki 2x", price: 4.50, img: "/Media/Surimitemaki.jpg" },
-  { id: 5, name: "Gunak Zeewier 3x", price: 3.70, img: "/Media/gunakzeewier.jpg" },
-  { id: 6, name: "Nigiri Omlet 2x", price: 4.70, img: "/Media/nigiriomlet.jpg" },
+  { id: 1, name: "Zalm Nigiri 2x", price: 3.90, img: "../Media/zalmnigiri.jpg" },
+  { id: 2, name: "Tonijn Maki 6x", price: 4.70, img: "../Media/tonijnmaki.jpg" },
+  { id: 3, name: "California Zalm 3x", price: 5.20, img: "../Media/Californiazalm.jpg" },
+  { id: 4, name: "Surimi Temaki 2x", price: 4.50, img: "../Media/Surimitemaki.jpg" },
+  { id: 5, name: "Gunak Zeewier 3x", price: 3.70, img: "../Media/gunakzeewier.jpg" },
+  { id: 6, name: "Nigiri Omlet 2x", price: 4.70, img: "../Media/nigiriomlet.jpg" },
 ];
 
 const cart = new Map();
