@@ -20,34 +20,28 @@ function addToCart(id) {
 }
 
 function updateCartDisplay() {
-  const cartItems = document.getElementById("cart-items");
-  cartItems.innerHTML = "";
+  const $cartItems = $("#cart-items");
+  $cartItems.html("");
 
   if (cart.size === 0) {
-    cartItems.innerHTML = "Uw winkelwagentje is leeg.";
+    $cartItems.html("Uw winkelwagentje is leeg.");
   } else {
     let total = 0;
     for (const [id, item] of cart.entries()) {
-      const listItem = document.createElement("div");
-      const itemInfo = document.createElement("p");
-      itemInfo.textContent = `${item.name} x ${item.count} (€${(
+      const $listItem = $("<div>");
+      const $itemInfo = $("<p>").text(`${item.name} x ${item.count} (€${(
         item.price * item.count
-      ).toFixed(2)})`;
-      listItem.appendChild(itemInfo);
+      ).toFixed(2)})`);
+      $listItem.append($itemInfo);
 
-      const removeButton = document.createElement("button");
-      removeButton.classList.add ("button2");
-      removeButton.textContent = "Verwijder";
-      removeButton.onclick = () => removeFromCart(id);
-      listItem.appendChild(removeButton);
+      const $removeButton = $("<button>").addClass("button2").text("Verwijder").click(() => removeFromCart(id));
+      $listItem.append($removeButton);
 
-      cartItems.appendChild(listItem);
+      $cartItems.append($listItem);
       total += item.price * item.count;
     }
-    const totalElement = document.createElement("p");
-    totalElement.style.fontWeight = "bold";
-    totalElement.textContent = `Totaal: €${total.toFixed(2)}`;
-    cartItems.appendChild(totalElement);
+    const $totalElement = $("<p>").css("fontWeight", "bold").text(`Totaal: €${total.toFixed(2)}`);
+    $cartItems.append($totalElement);
   }
 }
 
@@ -74,38 +68,25 @@ function placeOrder() {
 }
 
 function toggleCart() {
-  const cart = document.getElementById("cart");
-  cart.classList.toggle("open");
+  const $cart = $("#cart");
+  $cart.toggleClass("open");
 }
 
 function createDishElements() {
-  const dishes = document.querySelector(".dishes");
+  const $dishes = $(".dishes");
   dishesData.forEach((dish) => {
-    const dishElement = document.createElement("div");
-    dishElement.classList.add("dish");
+    const $dishElement = $("<div>").addClass("dish");
 
-    const dishImage = document.createElement("img");
-    dishImage.src = dish.img;
-    dishImage.alt = dish.name;
+    const $dishImage = $("<img>").attr("src", dish.img).attr("alt", dish.name);
 
-    const dishName = document.createElement("p");
-    dishName.classList.add("name");
-    dishName.textContent = dish.name;
+    const $dishName = $("<p>").addClass("name").text(dish.name);
 
-    const dishPrice = document.createElement("p");
-    dishPrice.classList.add("price");
-    dishPrice.textContent = "€" + dish.price + "0";
+    const $dishPrice = $("<p>").addClass("price").text("€" + dish.price + "0");
 
-    const addToCartButton = document.createElement("button");
-    addToCartButton.classList.add ("button1");
-    addToCartButton.textContent = "Bestel";
-    addToCartButton.onclick = () => addToCart(dish.id);
+    const $addToCartButton = $("<button>").addClass("button1").text("Bestel").click(() => addToCart(dish.id));
 
-    dishElement.appendChild(dishImage);
-    dishElement.appendChild(dishName);
-    dishElement.appendChild(dishPrice);
-    dishElement.appendChild(addToCartButton);
-    dishes.appendChild(dishElement);
+    $dishElement.append($dishImage, $dishName, $dishPrice, $addToCartButton);
+    $dishes.append($dishElement);
   });
 }
 
